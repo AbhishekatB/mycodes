@@ -19,10 +19,13 @@ def method2(arr,temp):
 	return 0
 	
 def method3(arr):
-	slow,fast = arr[0],arr[0]
+	slow = arr[arr[0]]
+	fast = arr[arr[arr[0]]]
+	print('Circular method runtime : O(n) space : O(1)')
 	while(slow!=fast):
 		slow = arr[slow]
 		fast = arr[arr[fast]]
+		print(slow,fast)
 	fast = arr[0]
 	while(slow!=fast):
 		slow = arr[slow]
